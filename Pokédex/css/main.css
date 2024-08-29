@@ -9,89 +9,76 @@
     --BGIMG: url(../img/body_bg.png);
 }
 
-body {
-    display: flex;
-    background-position-y: 3.75rem;
-    background-size: fill;
-    background: var(--BODYIMG) no-repeat;
-    display: block;
-    height: 1080;
-    width: 1920;
-}
-
-
 #site-header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 1920px;
-    height: 3.75rem;
+    display: flex;
+    width: 100%;
+    height: 60px;
     background: var(--BGIMG);
     border-bottom: 2px solid #000000;
-    align-items: center;
     justify-content: center;
-    justify-items: center;
+    flex-wrap: wrap;
 }
 
+#BG {
+    width: 100%;
+    height: auto;
+}
 
 #logo {
-    height: 7.813rem;
-    width: 7.813rem;
-    left: 46%;
-    /* left: 53.75rem; */
-    top: -2.031rem;
-    position: fixed;
+    position: absolute;
+    top: -30px;
+    height: 125px;
+    width: 125px;
 }
 
-div.container {
-    overflow: hidden;
-    align-items: center;
+body {
+    height: 100%;
+}
+
+.body-div {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 55% 0px 55% 0px;
     justify-content: center;
-    z-index: 0;
-    position: absolute;
-    width: 31.25rem;
-    height: 31.25rem;
-    left: 42.875rem;
-    top: 12.5rem;
+    background: var(--BODYIMG) no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
     background-image: var(--BGIMG);
     background-blend-mode: difference;
     background-color: #FFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
     border-radius: 38px;
-    /* opacity: 85%; */
 }
 
-form div.container-border {
-    z-index: 1;
-    left: 42.875rem;
-    top: 12.5rem;
-    width: 31.25rem;
-    height: 31.25rem;
-    box-sizing: border-box;
-    border-image: linear-gradient(to bottom, #FFF 0%, #999999 100%) 1;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 38px;
+.container-head {
+    display: flex;
+    padding: 5px 5px 15px 5px;
+    width: 500px;
+    height: 15%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #pokeball {
-    position: absolute;
-    top: -32.188rem;
-    left: -32.188rem;
-    scale: 9%;
+    padding: 5px;
+    width: 4rem;
+    height: 4rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
-form h1{
-    position: absolute;
-    width: 52.063rem;
-    height: 5.25rem;
-    left: 9.063rem;
-    top: 0.313rem;
+
+h1{
+    margin-left: 15px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
-    font-size: 4.688rem;
-    line-height: 7rem;
+    font-size: 35px;
     color: #FFFFFF;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -100,41 +87,41 @@ form h1{
 
 .line { 
     box-sizing: border-box;
-    position: absolute;
-    width: 28.125rem;
-    height: 0.938rem;
-    left: 1.563rem;
-    top: 25%;
+    margin: 0px 0px 15px 5%;
+    width: 90%;
+    height: 15px;
     background: #FFFFFF;
     border: 2px solid #000000;
 }
 
-form h2{
-    position: absolute;
-    left: 6.76%;
-    top: 40%;
+.input-div {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;   
+    margin-bottom: 145px; 
+    gap: 10px;
+}
+
+h2{
+    margin-right: 2%;
     text-wrap: nowrap;
     font-family: 'Poppins';
     font-style: italic;
     font-weight: 800;
-    font-size: 2.188rem;
-    line-height: 3.125rem;
+    font-size: 20px;
     color: #000000;
 }
 
 #name {
-    position: absolute;
-    left: 20px;
-    top: 55%;
-    width: 28.125rem;
-    height: 4.063rem;
+    width: 90%;
+    height: 3.5rem;
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid #000000;
     border-radius: 61px;    
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     font-weight: 800;
-    font-size: 2.188rem;
-    line-height: 3.125rem;
+    font-size: 35px;
     text-align: center;
     color: rgb(0, 0, 0);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -143,34 +130,44 @@ form h2{
 #name::placeholder{
     color:black;
     opacity: 25%;
+    font-size: 25px;
+    text-align: center;
+    
 }
 
 
 
-.search-div button{
+.search-div{
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0px;
     border: none;
-    position: absolute;
-    width: 31.25rem;
-    height: 7.5rem;
-    top: 78.13%;
+    width: 100%;
+    height: 120px;
     cursor: pointer;
-    position: absolute;
     background-image: var(--BGIMG);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
-    border-bottom-left-radius: 38px;
-    border-bottom-right-radius: 38px;
-    justify-content: space-evenly;
+    border-radius: 0px 0px 38px 38px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
 }
 
-button p {
-    position: relative;
-    left: 7%;
-    top: -5px;
+.button-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-div p {
+    display: none;
+    margin-right: 20px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
-    font-size: 4.688rem;
-    line-height: 7rem;
+    font-size: 75px;
+    line-height: 112px;
     color: #ffffff;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -178,16 +175,13 @@ button p {
 }
 
 button img, button:active img{
-    position: absolute;
-    width: 6.25rem;
-    height: 6.25rem;
-    left: 5.625rem;
-    top: 0.125rem;
+    width: 100px;
+    height: 100px;
 }
 
-button p:hover, button p:focus {
+button:hover > p, button:focus > p {
     top: -7px;
-    font-size: 5rem;
+    font-size: 80px;
 }
 
 button:hover > #icon, button:focus > #icon{
@@ -195,31 +189,26 @@ button:hover > #icon, button:focus > #icon{
 }
 
 #site-footer {
-    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    justify-items: center;
-    bottom: 0px;
-    left: 0px;
     width: 100%;
-    height: 5rem;
+    height: 80px;
     background: var(--BGIMG);
 }
 
 .socials{
-    position: absolute;
-    top: 0.938em;
-    left: 0.938em;
     display: flex;
-    width: 118.75em;
+    width: 100%;
     justify-items: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
-#ttv, #ig, #x{
-    width: 3.125rem;
-    height: 3.125rem;
+#ttv, #ig, #x, .socials a{
+    width: 50px;
+    height: 50px;
 }
 
 footer p{
@@ -231,35 +220,328 @@ footer p{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
-    font-size: 0.938rem;
+    font-size: 15px;
 }
 
 
-/* || SMALL */
-@media screen and (min-width: 576px) {
-    body {
-        height: 576px;
+
+@media screen and (min-width: 375px) {
+    .container {
+        width: 75%;
     }
-    .site-footer{
-        min-width: 576px;
-    }
-    #logo {
-        left: 36%;
+    .body-div {
+        padding: 42% 0px 42% 0px;
     }
 }
 
-/* || MEDIUM */
+@media screen and (min-width: 425px) {
+    .container {
+        width: 50%;
+    }
+
+    .body-div {
+        padding: 38% 0px 38% 0px;
+    }
+    
+    .container-head {
+        padding: 5px 5px 5px 5px;
+        width: 100%;
+        height: 15%;
+    }
+    
+    #pokeball {
+        padding: 5px;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    
+    h1{
+        font-size: 30px;
+    }
+    
+    .line   { 
+        margin: 0px 0px 25px 5%;
+        width: 90%;
+        height: 12px;
+    }
+    
+    .input-div {
+        width: 100%;
+        margin-bottom: 155px; 
+        gap: 15px;
+    }
+    
+    h2{
+        margin-right: 2%;
+        font-size: 15px;
+    }
+
+    .search-div p {
+        margin-right: 20px;
+        font-size: 75px;
+        line-height: 112px;
+    }
+
+    #name {
+        width: 90%;
+        height: 2rem;
+        font-size: 25px;
+    }
+    
+    #name::placeholder{
+        font-size: 20px;
+    }
+}
+
 @media screen and (min-width: 768px) {
-    #logo {
-        left: 45%;
+    .container {
+        width: 50%;
+    }
+
+    .body-div {
+        padding: 38% 0px 38% 0px;
+    }
+    
+    .container-head {
+        gap: 3%;
+        padding: 5px 5px 40px 5px;
+        width: 100%;
+        height: 15%;
+    }
+    
+    #pokeball {
+        padding: 5px;
+        width: 7rem;
+        height: 7rem;
+    }
+    
+    
+    h1{
+        font-size: 50px;
+    }
+    
+    .line { 
+        margin: 0px 0px 15px 5%;
+        width: 90%;
+        height: 15px;
+    }
+    
+    .input-div {
+        width: 100%;
+        margin-bottom: 160px; 
+        margin-top: 2%; 
+        gap: 15px;
+    }
+    
+    h2{
+        margin-right: 2%;
+        font-size: 30px;
+    }
+
+    .search-div p {
+        display: flex;
+        margin-right: 20px;
+        font-size: 75px;
+        line-height: 112px;
+    }
+
+    #name {
+        width: 90%;
+        height: 3.5rem;
+        font-size: 35px;
+    }
+    
+    #name::placeholder{
+        font-size: 35px;
     }
 }
 
-/* || LARGE */
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 50%;
+    }
 
-/* || XL  */
-@media screen and (min-width: 1200px) {}
+    .body-div {
+        padding: 38% 0px 38% 0px;
+    }
+    
+    .container-head {
+        padding: 5px 5px 40px 5px;
+        width: 100%;
+        height: 15%;
+        gap: 2%;
+    }
+    
+    #pokeball {
+        padding: 5px;
+        width: 7rem;
+        height: 7rem;
+    }
+    
+    
+    h1{
+        font-size: 75px;
+    }
+    
+    .line { 
+        margin: 0px 0px 15px 5%;
+        width: 90%;
+        height: 15px;
+    }
+    
+    .input-div {
+        width: 100%;
+        margin-bottom: 175px; 
+        margin-top: 2%; 
+        gap: 30px;
+    }
+    
+    h2{
+        margin-right: 2%;
+        font-size: 35px;
+    }
 
-/* || MOBILE DEVICE LANDSCAPE  */
-@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {}
+    .search-div p {
+        display: flex;
+        margin-right: 20px;
+        font-size: 75px;
+        line-height: 112px;
+    }
+
+    #name {
+        width: 90%;
+        height: 3.5rem;
+        font-size: 35px;
+    }
+    
+    #name::placeholder{
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 45%;
+    }
+
+    .body-div {
+        padding: 20% 0px 20% 0px;
+    }
+    
+    .container-head {
+        padding: 7px 5px 40px 7px;
+        width: 100%;
+        height: 15%;
+        gap: 1px;
+    }
+    
+    #pokeball {
+        padding: 5px;
+        width: 7rem;
+        height: 7rem;
+    }
+    
+    
+    h1{
+        font-size: 86px;
+    }
+    
+    .line { 
+        margin: 0px 0px 15px 5%;
+        width: 90%;
+        height: 15px;
+    }
+    
+    .input-div {
+        width: 100%;
+        margin-bottom: 175px; 
+        margin-top: 2%; 
+        gap: 30px;
+    }
+    
+    h2{
+        margin-right: 2%;
+        font-size: 45px;
+    }
+
+    .search-div p {
+        display: flex;
+        margin-right: 20px;
+        font-size: 75px;
+        line-height: 112px;
+    }
+
+    #name {
+        width: 90%;
+        height: 4.5rem;
+        font-size: 35px;
+    }
+    
+    #name::placeholder{
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        width: 30%;
+    }
+
+    .body-div {
+        padding: 20% 0px 20% 0px;
+    }
+    
+    .container-head {
+        padding: 7px 5px 40px 7px;
+        width: 100%;
+        height: 15%;
+        gap: 1px;
+    }
+    
+    #pokeball {
+        padding: 5px;
+        width: 7rem;
+        height: 7rem;
+    }
+    
+    
+    h1{
+        font-size: 63px;
+    }
+    
+    .line { 
+        margin: 0px 0px 15px 5%;
+        width: 90%;
+        height: 15px;
+    }
+    
+    .input-div {
+        width: 100%;
+        margin-bottom: 175px; 
+        margin-top: 2%; 
+        gap: 30px;
+    }
+    
+    h2{
+        margin-right: 2%;
+        font-size: 35px;
+    }
+
+    .search-div p {
+        display: flex;
+        margin-right: 20px;
+        font-size: 75px;
+        line-height: 112px;
+    }
+
+    #name {
+        width: 90%;
+        height: 4.5rem;
+        font-size: 35px;
+    }
+    
+    #name::placeholder{
+        font-size: 35px;
+    }
+}
