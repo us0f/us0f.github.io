@@ -12,7 +12,7 @@
 body {
     display: flex;
     background-position-y: 3.75rem;
-    background-size: cover;
+    background-size: fill;
     background: var(--BODYIMG) no-repeat;
     display: block;
     height: 1080;
@@ -238,7 +238,7 @@ footer p{
 /* || SMALL */
 @media screen and (min-width: 576px) {
     body {
-        min-width: 576px;
+        height: 576px;
     }
     .site-footer{
         min-width: 576px;
@@ -249,7 +249,11 @@ footer p{
 }
 
 /* || MEDIUM */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    #logo {
+        left: 45%;
+    }
+}
 
 /* || LARGE */
 @media screen and (min-width: 992px) {}
