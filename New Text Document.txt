@@ -10,8 +10,7 @@
 }
 
 body {
-    display: flex;
-    background-position-y: 3.75rem;
+    background-position-y: 60px;
     background-size: cover;
     background: var(--BODYIMG) no-repeat;
     display: block;
@@ -25,7 +24,7 @@ body {
     top: 0px;
     left: 0px;
     width: 1920px;
-    height: 3.75rem;
+    height: 60px;
     background: var(--BGIMG);
     border-bottom: 2px solid #000000;
     align-items: center;
@@ -35,12 +34,11 @@ body {
 
 
 #logo {
-    height: 7.813rem;
-    width: 7.813rem;
-    left: 46%;
-    /* left: 53.75rem; */
-    top: -2.031rem;
-    position: fixed;
+    height: 125px;
+    width: 125px;
+    left: 860px;
+    top: -32.5px;
+    position: absolute;
 }
 
 div.container {
@@ -49,10 +47,10 @@ div.container {
     justify-content: center;
     z-index: 0;
     position: absolute;
-    width: 31.25rem;
-    height: 31.25rem;
-    left: 42.875rem;
-    top: 12.5rem;
+    width: 500px;
+    height: 500px;
+    left: 686px;
+    top: 200px;
     background-image: var(--BGIMG);
     background-blend-mode: difference;
     background-color: #FFF;
@@ -63,10 +61,10 @@ div.container {
 
 form div.container-border {
     z-index: 1;
-    left: 42.875rem;
-    top: 12.5rem;
-    width: 31.25rem;
-    height: 31.25rem;
+    left: 686px;
+    top: 200px;
+    width: 500px;
+    height: 500px;
     box-sizing: border-box;
     border-image: linear-gradient(to bottom, #FFF 0%, #999999 100%) 1;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -75,23 +73,23 @@ form div.container-border {
 
 #pokeball {
     position: absolute;
-    top: -32.188rem;
-    left: -32.188rem;
+    top: -515px;
+    left: -515px;
     scale: 9%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 form h1{
     position: absolute;
-    width: 52.063rem;
-    height: 5.25rem;
-    left: 9.063rem;
-    top: 0.313rem;
+    width: 833px;
+    height: 84px;
+    left: 145px;
+    top: 5px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
-    font-size: 4.688rem;
-    line-height: 7rem;
+    font-size: 75px;
+    line-height: 112px;
     color: #FFFFFF;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -101,9 +99,9 @@ form h1{
 .line { 
     box-sizing: border-box;
     position: absolute;
-    width: 28.125rem;
-    height: 0.938rem;
-    left: 1.563rem;
+    width: 450px;
+    height: 15px;
+    left: 25px;
     top: 25%;
     background: #FFFFFF;
     border: 2px solid #000000;
@@ -117,8 +115,8 @@ form h2{
     font-family: 'Poppins';
     font-style: italic;
     font-weight: 800;
-    font-size: 2.188rem;
-    line-height: 3.125rem;
+    font-size: 35px;
+    line-height: 50px;
     color: #000000;
 }
 
@@ -126,15 +124,15 @@ form h2{
     position: absolute;
     left: 20px;
     top: 55%;
-    width: 28.125rem;
-    height: 4.063rem;
+    width: 450px;
+    height: 65px;
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid #000000;
     border-radius: 61px;    
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     font-weight: 800;
-    font-size: 2.188rem;
-    line-height: 3.125rem;
+    font-size: 35px;
+    line-height: 50px;
     text-align: center;
     color: rgb(0, 0, 0);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -150,8 +148,8 @@ form h2{
 .search-div button{
     border: none;
     position: absolute;
-    width: 31.25rem;
-    height: 7.5rem;
+    width: 500px;
+    height: 120px;
     top: 78.13%;
     cursor: pointer;
     position: absolute;
@@ -169,8 +167,8 @@ button p {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
-    font-size: 4.688rem;
-    line-height: 7rem;
+    font-size: 75px;
+    line-height: 112px;
     color: #ffffff;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -179,15 +177,15 @@ button p {
 
 button img, button:active img{
     position: absolute;
-    width: 6.25rem;
-    height: 6.25rem;
-    left: 5.625rem;
-    top: 0.125rem;
+    width: 100px;
+    height: 100px;
+    left: 90px;
+    top: 2px;
 }
 
 button p:hover, button p:focus {
     top: -7px;
-    font-size: 5rem;
+    font-size: 80px;
 }
 
 button:hover > #icon, button:focus > #icon{
@@ -195,31 +193,32 @@ button:hover > #icon, button:focus > #icon{
 }
 
 #site-footer {
-    position: fixed;
+    display: flex;
+    position: absolute;
     align-items: center;
-    justify-content: center;
-    justify-items: center;
+        justify-content: center;
+        justify-items: center;
     bottom: 0px;
     left: 0px;
-    width: 100%;
-    height: 5rem;
+    width: 1920px;
+    height: 80px;
     background: var(--BGIMG);
 }
 
 .socials{
     position: absolute;
-    top: 0.938em;
-    left: 0.938em;
+    top: 15px;
+    left: 15px;
     display: flex;
-    width: 118.75em;
+    width: 1900px;
     justify-items: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 #ttv, #ig, #x{
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 50px;
+    height: 50px;
 }
 
 footer p{
@@ -231,21 +230,12 @@ footer p{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
-    font-size: 0.938rem;
+    font-size: 15px;
 }
 
 
 /* || SMALL */
 @media screen and (min-width: 576px) {
-    body {
-        min-width: 576px;
-    }
-    .site-footer{
-        min-width: 576px;
-    }
-    #logo {
-        left: 36%;
-    }
 }
 
 /* || MEDIUM */
