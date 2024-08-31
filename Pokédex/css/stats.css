@@ -1144,10 +1144,10 @@ body #pokemonName, body #pokemonId {
     }
     
     #type-value {
-        margin-top: -10px;
-        margin-left: 95px;
+        margin-top: 5px;
+        margin-left: 65px;
         text-transform: capitalize;
-        font-size: 60px;
+        font-size: 50px;
     }
     
     /* ______________________|| WEIGHT / HEIGHT ||___________________________________________________ */
@@ -1388,6 +1388,7 @@ body #pokemonName, body #pokemonId {
     }
     
     #type-value {
+        margin-top: -10px;
         margin-left: 75px;
         text-transform: capitalize;
         font-size: 60px;
