@@ -1190,7 +1190,7 @@ body #pokemonName, body #pokemonId {
         font-size: 30px;
     }
     
-    /* _______________________________________|| ABILITIES ||_______________________________________ */
+    /* ______________________|| ABILITIES ||___________________________________________________ */
     
     .line { 
         box-sizing: border-box;
@@ -1474,6 +1474,7 @@ body #pokemonName, body #pokemonId {
         width: 100%;
         height: 29.5%;
         gap: 20px;
+        margin-top: 20px;
     }
     
     .row {
