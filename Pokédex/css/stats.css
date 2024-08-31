@@ -5,47 +5,45 @@
 }
 
 body {
-    background-position-y: 60px;
+    background: url(/img/Pokedex_bg.png);
     background-size: cover;
-    background: url(../img/Pokedex_bg.png);
-    display: block;
-    height: 1080;
-    width: 1920;
 }
 
-.hidden{
-    position: absolute;
-    left:-10000px;
+.header-div {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
 }
 
-body #pokemonName {
+.basic-info {
+    display: flex;
+    flex-wrap: wrap;
+    transform: skew(-10deg,-10deg);
+    rotate: 10deg;
+    background: url(/img/body_bg.png);
+    width: 85%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.id-name{
+    display: flex;
+    gap: 15px;
+}
+
+body #pokemonName, body #pokemonId {
     transform: skew(10deg,10deg);
     rotate: -10deg;
-    position: absolute;
-    top: -15px;
-    left: 395px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 112px;
-    color: #FFFFFF;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-body #pokemonId {
-    transform: skew(10deg,10deg);
-    rotate: -10deg;
-    position: absolute;
-    top: -15px;
-    left: 50px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 112px;
+    font-size: 26px;
     color: #FFFFFF;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -53,230 +51,175 @@ body #pokemonId {
 }
 
 #ball{
-    position: absolute;
-    height: 90px;
-    width: 90px;
-    left: 47%;
-    rotate: 20deg;
-    top: -5px;
-}
-#logo{
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    left: 70%;
-    top: -35px;
+    display: none;
+    height: 85px;
+    width: 85px;
 }
 
-.basic-info {
-    overflow: hidden;
-    position: absolute;
-    transform: skew(-10deg,-10deg);
-    rotate: 10deg;
-    top: 15px;
-    left: 50px;
-    width: 1820px;
-    height: 80px;
-    background: url(../img/body_bg.png);
+.logo {
+    display: none;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    justify-items: center;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    height: 80%;
 }
 
-.pokeImage{
-    position: absolute;
-    width: 700px;
-    height: 650px;
-    top: 150px;
-    left: 35px;
+.logo img, .logo a{
+    height: 40%;
+    width: 100%;
 }
+
+.img-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.pokeImage{
+    margin: 5%;
+    width: 90%;
+    height: 90%;
+}
+
 
 /* ______________________|| ABOUT ||___________________________________________________ */
 
-.about{
-    overflow: hidden;
-    align-items: center;
+.container{
+    display: flex;
+    margin: 5%;
+    flex-wrap: wrap;
     justify-content: center;
-    z-index: 0;
-    position: relative;
-    width: 750px;
-    height: 750px;
-    left: 1030px;
-    top: 150px;
+    width: 90%;
     background: rgba(0, 0, 0, 0.384);
     filter: drop-shadorgb(160, 160, 160)px 4px rgba(0, 0, 0, 0.5);
     border-radius: 38px;
 }
 
 #pokeType{
-    position: relative;
-    top: 50px;
-    left: 75px;
-    width: 550px;
-    height: 75px;
+    margin-top: 5%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 12%;
     background: white;
     border-radius: 6px;
 }
 
 
 #div-type{
-    z-index: 0;
-    top: 0%;
-    left: 0%;
-    width: 200px;
-    height: 75px;
+    width: 27.5%;
     background: #dcdbd7;
     border-radius: 6px 0px 0px 6px;
 }
 
 #type {
-    position: absolute;
-    top: 1px;
-    left: 50px;
-    z-index: 1;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
-    font-size: 45px;
+    font-size: 25px;
     color: #000000;
-    text-align: center;
     align-items: center;
-    justify-content: center;
 }
 
 #type-value {
+    margin-top: -1%;
+    margin-left: 25%;
     text-transform: capitalize;
-    position: absolute;
-    top: -8px;
-    left: 265px;
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
+    font-size: 30px;
     color: #000000;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 /* ______________________|| WEIGHT / HEIGHT ||___________________________________________________ */
 
-#pokeW {
-    position: absolute;
-    top: 175px;
-    left: 15px;
-    width: 350px;
-    height: 75px;
-    background: white;
-    border-radius: 6px;
-}
-
-#pokeH {
-    position: absolute;
-    top: 175px;
-    left: 375px;
-    width: 350px;
-    height: 75px;
-    background: white;
-    border-radius: 6px;
-}
-
-#div-W{
-    z-index: 0;
-    top: 0%;
-    left: 0%;
-    width: 100px;
-    height: 75px;
-    background: #dcdbd7;
-    border-radius: 6px 0px 0px 6px;
-}
-
-#div-H {
-    z-index: 0;
-    top: 0%;
-    left: 0%;
-    width: 100px;
-    height: 75px;
-    background: #dcdbd7;
-    border-radius: 6px 0px 0px 6px;
-}
-
-
-#w, #h {
-    position: relative;
-    top: 20px;
-    z-index: 1;
+.weight-height-div{
+    display: flex;
+    flex-wrap: wrap;
+    white-space: normal;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     justify-content: center;
-    justify-items: center;
+    gap: 7.5px;
+    width: 100%;
+    height: 12%;
+    color: #000000;
     font-family: 'Poppins';
     font-style: normal;
+}
+
+#pokeW ,#pokeH {
+    display: flex;
+    flex-wrap: wrap;
+    width: 47%;
+    height: 100%;
+    background: white;
+    border-radius: 6px;
+}
+
+.abtTitles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+    background: #dcdbd7;
+    border-radius: 6px 0px 0px 6px;
     font-weight: 800;
-    font-size: 24px;
-    color: #000000;
+    font-size: 13px;
+    
 }
 
-#w-value, #h-value{
-    top: 22px;
-    left: 190px;
-    position: absolute;
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
-    font-family: 'Poppins';
-    font-style: normal;
+.abtTitles p, .weight-height-div p{
+    width: 100%;
+}
+
+.w-value, .h-value{
+    display: flex;
+    width: 65%;
     font-weight: 555;
-    font-size: 22px;
-    color: #000000;
+    font-size: 14px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 /* ______________________|| ABILITIES ||___________________________________________________ */
 
-.line1 { 
+.line { 
+    margin: 15px;
     box-sizing: border-box;
-    position: relative;
-    width: 650px;
+    width: 90%;
     height: 7px;
-    left: 50px;
-    top: 200px;
-    background: #FFFFFF;
-    border: 2px solid #000000;
-}
-.line2 { 
-    box-sizing: border-box;
-    position: relative;
-    width: 650px;
-    height: 7px;
-    left: 40px;
-    top: 185px;
     background: #FFFFFF;
     border: 2px solid #000000;
 }
 
 .abilities {
-    position: relative;
-    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
     justify-content: center;
-    z-index: 0;
-    position: absolute;
-    width: 710px;
-    height: 165px;
-    left: 1045px;
-    top: 450px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    width: 95%;
+    height: 35%;
     background: rgba(0, 0, 0, 0.384);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
     border-radius: 38px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+    padding: 0px 0px 15px 0px;
 }
 
 #ability-head {
-    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
     border: none;
-    position: absolute;
-    width: 710px;
-    height: 55px;
+    width: 100%;
+    height: 20%;
     background-color: azure;
     border-top-left-radius: 38px;
     border-top-right-radius: 38px;
@@ -284,129 +227,1298 @@ body #pokemonId {
 }
 
 #ab {
-    position: relative;
-    top: 5px;
-    z-index: 1;
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
+    font-size: 25px;
     letter-spacing: 10px;
     color: #000000;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(105, 105, 105);
-    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
 }
 
 #ab-value {
-    overflow: hidden;
+    margin-top: 10px;
     text-transform: capitalize;
-    position: absolute;
-    padding-left: 110px;
-    padding-right: 15px;
-    padding-top: 15px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
+    font-size: 20px;
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
+} 
 /* ______________________|| STATS ||___________________________________________________ */
 
 .stats {
-    position: absolute;
-    z-index: 0;
-    width: 710px;
-    height: 225px;
-    left: 1045px;
-    top: 660px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 15%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
     border-radius: 38px;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-divs {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
 }
 
 #hp-icon, #atk-icon, #Satk-icon, #def-icon, #Sdef-icon, #sp-icon {
-    position: absolute;
-    width: 75px;
-    height: 75px;
-}
-
-#hp-icon{
-    top: 7px;
-    left: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 #atk-icon{
-    width: 65px;
-    height: 65px;
-    top: 12px;
-    left: 270px;
+    width: 35px;
+    height: 35px;
+    margin-left: 12px
 }
-
-#Satk-icon{
-    top: 7px;
-    left: 510px;
-}
-
-#sp-icon{
-    top: 135px;
-    left: 20px;
-}
-
-#def-icon{
-    top: 135px;
-    left: 262px;
-}
-
-#Sdef-icon{
-    top: 135px;
-    left: 510px;
-}
-
-/* --------------------------------------------------------------------- */
 
 .stats-value {
-    position: absolute;
+    margin-top: 5px;
+    margin-left: 10px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
-    font-size: 40px;
+    font-size: 20px;
     color: #FFFFFF;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#hp-value{
-    top: 14px;
-    left: 115px;
+/* _________________________________________________________ */
+
+#site-footer {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background: url(/img/body_bg.png);
 }
 
-#atk-value{
-    top: 14px;
-    left: 370px;
+#site-footer a, #site-footer img {
+    width: 100%;
+    height: 40px;
 }
 
-#Satk-value{
-    top: 14px;
-    left: 610px;
+/*_________________________________________________________________________________ MEDIA QUERIES _________________________________________________________________________________*/
+
+@media screen and (min-width: 375px) {
+    #def-icon{
+        margin-left: -10px;
+    }
 }
 
-#sp-value{
-    top: 146px;
-    left: 115px;
+@media screen and (min-width: 425px) {
+    .header-div {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+    }
+    
+    .basic-info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 85%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+    }
+    
+    .id-name{
+        display: flex;
+        gap: 22px;
+    }
+    
+    body #pokemonName, body #pokemonId {
+        font-size: 30px;
+    }
+    
+    #ball{
+        display: none;
+        height: 85px;
+        width: 85px;
+    }
+    
+    .logo {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+    
+    .logo img, .logo a{
+        height: 40%;
+        width: 100%;
+    }
+    
+    .img-div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pokeImage{
+        margin: 5%;
+        width: 45%;
+        height: 45%;
+    }
+    
+    /* ______________________|| ABOUT ||___________________________________________________ */
+    
+    .container{
+        display: flex;
+        margin: 0px;
+        margin-left: 15%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+    
+    #pokeType{
+        margin-top: 5%;
+        margin-bottom: 2%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 12%;
+    }
+    
+    
+    #div-type{
+        width: 27.5%;
+    }
+    
+    #type {
+        font-size: 25px;
+        align-items: center;
+    }
+    
+    #type-value {
+        margin-top: -1%;
+        margin-left: 25%;
+        font-size: 30px;
+    }
+    
+    /* ______________________|| WEIGHT / HEIGHT ||___________________________________________________ */
+  
+    .weight-height-div{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 7.5px;
+        width: 100%;
+        height: 12%;
+        margin-bottom: 10px;
+    }
+    
+    #pokeW ,#pokeH {
+        display: flex;
+        flex-wrap: wrap;
+        width: 47%;
+        height: 100%;
+    }
+    
+    .abtTitles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 35%;
+        font-size: 13px;
+    }
+    
+    .abtTitles p, .weight-height-div p{
+        width: 100%;
+    }
+    
+    .w-value, .h-value{
+        display: flex;
+        width: 65%;
+        font-size: 14px;
+    }
+    
+    /* ______________________|| ABILITIES ||___________________________________________________ */
+    
+    .line { 
+        margin: 15px;
+        box-sizing: border-box;
+        width: 90%;
+        height: 7px;
+    }
+    
+    .abilities {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        width: 95%;
+        height: 35%;
+        padding: 0px 0px 15px 0px;
+    }
+    
+    #ability-head {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 20%;
+        justify-content: space-evenly;
+    }
+    
+    #ab {
+        font-size: 25px;
+        letter-spacing: 10px;
+    }
+    
+    #ab-value {
+        margin-top: 10px;
+        font-size: 20px;
+    } 
+    /* ______________________|| STATS ||___________________________________________________ */
+    
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        height: 15%;
+        gap: 10px;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        height: 40px;
+        width: 100%;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .stat-divs {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    
+    #hp-icon, #atk-icon, #Satk-icon, #def-icon, #Sdef-icon, #sp-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #atk-icon{
+        width: 35px;
+        height: 35px;
+        margin-left: 12px
+    }
+    
+    .stats-value {
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    
+    /* _________________________________________________________ */
+    
+    #site-footer {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+    }
+    
+    #site-footer a, #site-footer img {
+        width: 100%;
+        height: 40px;
+    }
 }
 
-#def-value{
-    top: 146px;
-    left: 370px;
+@media screen and (min-width: 768px) {
+    .header-div {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+    }
+    
+    .basic-info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 85%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+    }
+    
+    .id-name{
+        display: flex;
+        gap: 22px;
+    }
+    
+    body #pokemonName, body #pokemonId {
+        font-size: 30px;
+    }
+    
+    #ball{
+        display: none;
+        height: 85px;
+        width: 85px;
+    }
+    
+    .logo {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+    
+    .logo img, .logo a{
+        height: 40%;
+        width: 100%;
+    }
+    
+    .img-div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pokeImage{
+        margin: 5%;
+        width: 45%;
+        height: 45%;
+    }
+    
+    /* ______________________|| ABOUT ||___________________________________________________ */
+    
+    .container{
+        display: flex;
+        margin: 0px;
+        margin-left: 15%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+    
+    #pokeType{
+        margin-top: 5%;
+        margin-bottom: 2%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 12%;
+    }
+    
+    
+    #div-type{
+        width: 27.5%;
+    }
+    
+    #type {
+        font-size: 30px;
+        align-items: center;
+    }
+    
+    #type-value {
+        margin-top: -1%;
+        margin-left: 25%;
+        font-size: 35px;
+    }
+    
+    /* ______________________|| WEIGHT / HEIGHT ||___________________________________________________ */
+  
+    .weight-height-div{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 7.5px;
+        width: 100%;
+        height: 12%;
+        margin-bottom: 10px;
+    }
+    
+    #pokeW ,#pokeH {
+        display: flex;
+        flex-wrap: wrap;
+        width: 47%;
+        height: 100%;
+    }
+    
+    .abtTitles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 35%;
+        font-size: 20px;
+    }
+    
+    .abtTitles p, .weight-height-div p{
+        width: 100%;
+    }
+    
+    .w-value, .h-value{
+        display: flex;
+        width: 65%;
+        font-size: 20px;
+    }
+    
+    /* ______________________|| ABILITIES ||___________________________________________________ */
+    
+    .line { 
+        margin: 15px;
+        box-sizing: border-box;
+        width: 90%;
+        height: 7px;
+    }
+    
+    .abilities {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        width: 95%;
+        height: 35%;
+        padding: 0px 0px 15px 0px;
+    }
+    
+    #ability-head {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 20%;
+        justify-content: space-evenly;
+    }
+    
+    #ab {
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+    
+    #ab-value {
+        margin-top: 10px;
+        font-size: 25px;
+    } 
+    /* ______________________|| STATS ||___________________________________________________ */
+    
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        height: 15%;
+        gap: 30px;
+        padding-bottom: 15px;
+        margin-bottom: 40px;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        height: 40px;
+        width: 100%;
+        gap: 65px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .stat-divs {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    
+    #hp-icon, #atk-icon, #Satk-icon, #def-icon, #Sdef-icon, #sp-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    #atk-icon{
+        width: 50px;
+        height: 50px;
+        margin-left: 20px
+    }
+    
+    .stats-value {
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 30px;
+    }
+    
+    /* _________________________________________________________ */
+    
+    #site-footer {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+    }
+    
+    #site-footer a, #site-footer img {
+        width: 100%;
+        height: 40px;
+    }
 }
 
-#Sdef-value{
-    top: 145px;
-    left: 610px;
+@media screen and (min-width: 1024px) {
+    .header-div {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+    }
+    
+    .basic-info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 85%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+    }
+    
+    .id-name{
+        display: flex;
+        gap: 22px;
+    }
+    
+    body #pokemonName, body #pokemonId {
+        font-size: 30px;
+    }
+    
+    #ball{
+        display: none;
+        height: 85px;
+        width: 85px;
+    }
+    
+    .logo {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+    
+    .logo img, .logo a{
+        height: 40%;
+        width: 100%;
+    }
+    
+    .img-div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pokeImage{
+        margin: 5%;
+        width: 45%;
+        height: 45%;
+    }
+    
+    /* ______________________|| ABOUT ||___________________________________________________ */
+    
+    .container{
+        display: flex;
+        margin: 0px;
+        margin-left: 15%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+    
+    #pokeType{
+        margin-top: 5%;
+        margin-bottom: 2%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 12%;
+    }
+    
+    
+    #div-type{
+        width: 27.5%;
+    }
+    
+    #type {
+        font-size: 35px;
+        align-items: center;
+    }
+    
+    #type-value {
+        margin-top: 0%;
+        margin-left: 25%;
+        font-size: 40px;
+    }
+    
+    /* ______________________|| WEIGHT / HEIGHT ||___________________________________________________ */
+  
+    .weight-height-div{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 7.5px;
+        width: 100%;
+        height: 12%;
+        margin-bottom: 10px;
+    }
+    
+    #pokeW ,#pokeH {
+        display: flex;
+        flex-wrap: wrap;
+        width: 47%;
+        height: 100%;
+    }
+    
+    .abtTitles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 35%;
+        font-size: 25px;
+    }
+    
+    .abtTitles p, .weight-height-div p{
+        width: 100%;
+    }
+    
+    .w-value, .h-value{
+        display: flex;
+        width: 65%;
+        font-size: 25px;
+    }
+    
+    /* ______________________|| ABILITIES ||___________________________________________________ */
+    
+    .line { 
+        margin: 15px;
+        box-sizing: border-box;
+        width: 90%;
+        height: 7px;
+    }
+    
+    .abilities {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        width: 95%;
+        height: 35%;
+        padding: 0px 0px 15px 0px;
+    }
+    
+    #ability-head {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 20%;
+        justify-content: space-evenly;
+    }
+    
+    #ab {
+        font-size: 35px;
+        letter-spacing: 10px;
+    }
+    
+    #ab-value {
+        margin-top: 10px;
+        font-size: 30px;
+    } 
+    /* ______________________|| STATS ||___________________________________________________ */
+    
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        height: 15%;
+        gap: 45px;
+        padding-bottom: 15px;
+        margin-bottom: 40px;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        height: 40px;
+        width: 100%;
+        gap: 15%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .stat-divs {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    
+    #hp-icon, #atk-icon, #Satk-icon, #def-icon, #Sdef-icon, #sp-icon {
+        width: 75px;
+        height: 75px;
+    }
+    
+    #atk-icon{
+        width: 65px;
+        height: 65px;
+        margin-left: 20px
+    }
+    
+    .stats-value {
+        margin-top: 13px;
+        margin-left: 20px;
+        font-size: 35px;
+    }
+    
+    /* _________________________________________________________ */
+    
+    #site-footer {
+        margin-top: 65px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+    }
+    
+    #site-footer a, #site-footer img {
+        width: 100%;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background: url(/img/Pokedex_bg.png);
+        background-size: cover;
+    }
+
+    .header-div {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+    }
+    
+    .basic-info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        height: 80px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0px;
+    }
+    
+    .id-name{
+        margin-left: 50px;
+        display: flex;
+        gap: 238.5px;
+    }
+    
+    body #pokemonName, body #pokemonId {
+        font-size: 40px;
+        color: #FFFFFF;
+    }
+    
+    #ball{
+        display: flex;
+        margin-right: 5.5%;
+        height: 85px;
+        width: 85px;
+    }
+    
+    .logo {
+        display: flex;
+        margin-right: 21.5%;
+        height: 100%;
+        justify-content: center;
+    }
+    
+    .logo img{
+        margin-top: -2%;
+        height: 80%;
+        width: 100%;
+    }
+    
+    .img-div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .pokeImage{
+        margin: 0px 0px 0px 0px;
+        width: 85%;
+        height: 85%;
+    }
+    
+    /* ___________________________________________________________________________________________ */
+    
+    .body-div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    /* ______________________|| ABOUT ||___________________________________________________ */
+    
+    .container{
+        margin: 4% 0px 0px 2%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 43%;
+    }
+    
+    #pokeType{
+        margin-top: 40px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 75%;
+        height: 12%;
+    }
+    
+    #div-type{
+        width: 36.5%;
+        height: 100%;
+    }
+    
+    #type {
+        font-size: 45px;
+        align-items: center;
+    }
+    
+    #type-value {
+        margin-top: -10px;
+        margin-left: 95px;
+        text-transform: capitalize;
+        font-size: 60px;
+    }
+    
+    /* ______________________|| WEIGHT / HEIGHT ||___________________________________________________ */
+    
+    .weight-height-div{
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        height: 11%;
+    }
+    
+    #pokeW ,#pokeH {
+        display: flex;
+        flex-wrap: wrap;
+        width: 47%;
+        height: 100%;
+    }
+    
+    .abtTitles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 35%;
+        font-size: 26px;
+        
+    }
+    
+    .abtTitles p, .weight-height-div p{
+        width: 100%;
+    }
+    
+    .w-value, .h-value{
+        margin-top: 10px;
+        width: 65%;
+        font-size: 30px;
+    }
+    
+    /* ______________________|| ABILITIES ||___________________________________________________ */
+    
+    .line { 
+        box-sizing: border-box;
+        width: 90%;
+        height: 7px;
+    }
+    
+    .abilities {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 95%;
+        height: 23%;
+    }
+    
+    #ability-head {
+        border: none;
+        width: 100%;
+        height: 38%;
+        justify-content: space-evenly;
+    }
+    
+    #ab {
+        font-size: 35px;
+        letter-spacing: 10px;
+    }
+    
+    #ab-value {
+        margin-top: 13px;
+        text-transform: capitalize;
+        font-size: 50px;
+    } 
+    /* ______________________|| STATS ||___________________________________________________ */
+    
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 31%;
+        gap: 20px;
+        margin-bottom: 23%;
+    }
+    
+    .row {
+        display: flex;
+        gap: 45px;
+        flex-wrap: wrap;
+    }
+
+    #hp-icon, #atk-icon, #Satk-icon, #def-icon, #Sdef-icon, #sp-icon {
+        width: 75px;
+        height: 75px;
+    }
+    
+
+    #atk-icon{
+        width: 65px;
+        height: 65px;
+    }
+    
+
+    #def-icon {
+        margin-left: -65px;
+    }
+
+    #Sdef-icon {
+        margin-left: -15px;
+    }
+
+    #sp-value {
+        margin-right: 85px;
+    }
+
+    #def-value {
+        margin-right: 10px;
+    }
+
+    .stats-value {
+        margin-top: 5px;
+        font-size: 40px;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    #site-footer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1841px) {
+    body {
+        background: url(/img/Pokedex_bg.png);
+        background-size: cover;
+    }
+
+    .header-div {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+    }
+    
+    .basic-info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        height: 80px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0px;
+    }
+    
+    .id-name{
+        margin-left: 50px;
+        display: flex;
+        gap: 238.5px;
+    }
+    
+    body #pokemonName, body #pokemonId {
+        font-size: 40px;
+        color: #FFFFFF;
+    }
+    
+    #ball{
+        display: flex;
+        margin-right: 5.5%;
+        height: 85px;
+        width: 85px;
+    }
+    
+    .logo {
+        display: flex;
+        margin-right: 21.5%;
+        height: 100%;
+        justify-content: center;
+    }
+    
+    .logo img{
+        margin-top: -2%;
+        height: 80%;
+        width: 100%;
+    }
+    
+    .img-div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 800px;
+    }
+
+    .pokeImage{
+        margin: 50px 0px 0px 35px;
+        width: 800px;
+        height: 750px;
+    }
+    
+    /* ___________________________________________________________________________________________ */
+    
+    .body-div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    /* ______________________|| ABOUT ||___________________________________________________ */
+    
+    .container{
+        margin: 50px 0px 0px 10%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 38%;
+    }
+    
+    #pokeType{
+        margin-top: 40px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 75%;
+        height: 10%;
+    }
+    
+    #div-type{
+        width: 36.5%;
+        height: 100%;
+    }
+    
+    #type {
+        font-size: 45px;
+        align-items: center;
+    }
+    
+    #type-value {
+        margin-left: 75px;
+        text-transform: capitalize;
+        font-size: 60px;
+    }
+    
+    /* ______________________|| WEIGHT / HEIGHT ||___________________________________________________ */
+    
+    .weight-height-div{
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        height: 10%;
+    }
+    
+    #pokeW ,#pokeH {
+        display: flex;
+        flex-wrap: wrap;
+        width: 47%;
+        height: 100%;
+    }
+    
+    .abtTitles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 35%;
+        font-size: 24px;
+        
+    }
+    
+    .abtTitles p, .weight-height-div p{
+        width: 100%;
+    }
+    
+    .w-value, .h-value{
+        margin-top: 20px;
+        width: 65%;
+        font-size: 22px;
+    }
+    
+    /* ______________________|| ABILITIES ||___________________________________________________ */
+    
+    .line { 
+        box-sizing: border-box;
+        width: 90%;
+        height: 7px;
+    }
+    
+    .abilities {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 95%;
+        height: 21.8%;
+    }
+    
+    #ability-head {
+        border: none;
+        width: 100%;
+        height: 33%;
+        justify-content: space-evenly;
+    }
+    
+    #ab {
+        font-size: 35px;
+        letter-spacing: 10px;
+    }
+    
+    #ab-value {
+        margin-top: 13px;
+        text-transform: capitalize;
+        font-size: 50px;
+    } 
+    /* ______________________|| STATS ||___________________________________________________ */
+    
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 29.5%;
+        gap: 20px;
+    }
+    
+    .row {
+        display: flex;
+        gap: 45px;
+        flex-wrap: wrap;
+    }
+
+    #hp-icon, #atk-icon, #Satk-icon, #def-icon, #Sdef-icon, #sp-icon {
+        width: 75px;
+        height: 75px;
+    }
+    
+
+    #atk-icon{
+        width: 65px;
+        height: 65px;
+    }
+    
+
+    #def-icon {
+        margin-left: -65px;
+    }
+
+    #Sdef-icon {
+        margin-left: -15px;
+    }
+
+    #sp-value {
+        margin-right: 85px;
+    }
+
+    #def-value {
+        margin-right: 10px;
+    }
+
+    .stats-value {
+        margin-top: 5px;
+        font-size: 40px;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    #site-footer {
+        display: none;
+    }
 }

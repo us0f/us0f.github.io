@@ -31,10 +31,6 @@
     width: 125px;
 }
 
-body {
-    height: 100%;
-}
-
 .body-div {
     display: flex;
     flex-wrap: wrap;
